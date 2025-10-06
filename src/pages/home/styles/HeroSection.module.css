@@ -1,0 +1,137 @@
+.heroSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 100px;
+  position: relative;
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+  overflow: hidden;
+}
+
+/* Left Content */
+.heroLeft {
+  max-width: 600px;
+  z-index: 2;
+}
+
+.heroLeft h1 {
+  font-size: 3.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.heroLeft p {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 36px;
+}
+
+/* CTA Buttons */
+.ctaButtons {
+  display: flex;
+  gap: 18px;
+}
+
+.startBtn {
+  background-color: #e63946;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 6px 14px rgba(230, 57, 70, 0.3);
+  transition: all 0.3s ease;
+}
+
+.startBtn:hover {
+  transform: translateY(-3px);
+  background-color: #d62839;
+  box-shadow: 0 8px 18px rgba(230, 57, 70, 0.4);
+}
+
+.demoBtn {
+  background-color: transparent;
+  border: 2px solid #e63946;
+  color: #e63946;
+  padding: 13px 28px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.demoBtn:hover {
+  background-color: #e63946;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Right Illustration */
+.heroRight {
+  width: 480px;
+  z-index: 2;
+  perspective: 1000px;
+}
+
+.heroRight canvas,
+.heroRight svg {
+  width: 100%;
+  height: auto;
+}
+
+/* Glow / Light Circle */
+.glowCircle {
+  position: absolute;
+  top: -80px;
+  right: -120px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(230, 57, 70, 0.25) 0%,
+    rgba(230, 57, 70, 0) 70%
+  );
+  border-radius: 50%;
+  filter: blur(40px);
+  z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .heroSection {
+    flex-direction: column;
+    padding: 60px 30px;
+    text-align: center;
+  }
+
+  .heroLeft {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .heroLeft h1 {
+    font-size: 2.4rem;
+  }
+
+  .heroLeft p {
+    font-size: 1rem;
+  }
+
+  .ctaButtons {
+    justify-content: center;
+  }
+
+  .heroRight {
+    width: 90%;
+  }
+
+  .glowCircle {
+    display: none;
+  }
+}
