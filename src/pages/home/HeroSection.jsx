@@ -2,7 +2,8 @@ import React, { useEffect, useRef } from "react";
 import styles from "./styles/HeroSection.module.css";
 import { gsap } from "gsap";
 import Lottie from "lottie-react";
-import billingAnimation from "../../assets/billing-3d.json"; 
+import { TypeAnimation } from "react-type-animation";
+import billingAnimation from "../../assets/billing-3d.json";
 
 function HeroSection() {
   const textRef = useRef(null);
@@ -36,10 +37,27 @@ function HeroSection() {
     <section className={styles.heroSection}>
       {/* Left Content */}
       <div className={styles.heroLeft} ref={textRef}>
-        <h1>Smart Billing & Inventory for Growing Businesses</h1>
+        <h1>
+          Smart Billing & Inventory for <br />
+          <span className={styles.typewriter}>
+            <TypeAnimation
+              sequence={[
+                "Fast Businesses", 2000,
+                "", 300,
+                "Reliable Teams", 2000,
+                "", 300,
+                "Rising Brands", 2000,
+                "", 300,
+              ]}
+              wrapper="span"
+              speed={70}
+              repeat={Infinity}
+            />
+          </span>
+        </h1>
+
         <p>
-          IndiaBills helps you manage billing, GST invoices, inventory &
-          reporting seamlessly.
+          IndiaBills helps you manage billing, GST invoices, inventory & reporting seamlessly.
         </p>
 
         <div className={styles.ctaButtons}>

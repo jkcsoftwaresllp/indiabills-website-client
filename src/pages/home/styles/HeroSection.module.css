@@ -10,7 +10,7 @@
 
 /* Left Content */
 .heroLeft {
-  max-width: 600px;
+  max-width: 620px;
   z-index: 2;
 }
 
@@ -134,4 +134,17 @@
   .glowCircle {
     display: none;
   }
+}
+
+
+
+/* --------------------- */
+
+
+.typewriter {
+  color: #e63946;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  min-width: 200px; /* Keeps spacing even when text changes */
 }
