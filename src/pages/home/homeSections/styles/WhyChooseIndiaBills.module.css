@@ -1,0 +1,87 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 80px 2rem;
+  background-color: #f9f9f9;
+  align-items: center;
+  justify-content: center;
+}
+
+.left {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  cursor: default;
+}
+
+.right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #e53935; /* IndiaBills primary red */
+}
+
+.subheading {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.featuresList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: #fff;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.check {
+  font-size: 1.5rem;
+  color: #e53935;
+  margin-top: 4px;
+}
+
+.featureItem h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.featureItem p {
+  margin: 0.2rem 0 0 0;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .left {
+    margin-bottom: 2rem;
+  }
+}

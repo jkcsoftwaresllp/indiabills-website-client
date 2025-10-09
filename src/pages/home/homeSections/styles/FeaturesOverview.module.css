@@ -1,0 +1,156 @@
+:root {
+  --primary-red: #e63946;
+}
+
+.section {
+  width: 100%;
+  padding: 100px 20px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  background: #ffffff; /* white background */
+}
+
+.heading h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-red); /* main theme red */
+}
+
+.heading p {
+  font-size: 1.1rem;
+  color: #555555;
+  margin-top: 8px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  margin-top: 70px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  perspective: 1000px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 24px;
+  box-shadow: 0 15px 35px rgba(230, 57, 70, 0.08);
+  border: 1px solid rgba(230, 57, 70, 0.2);
+  transform-style: preserve-3d;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  height: 210px;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    rgba(230, 57, 70, 0.2),
+    rgba(255, 255, 255, 0),
+    rgba(230, 57, 70, 0.2)
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+  animation: rotateGlow 3s linear infinite;
+}
+
+@keyframes rotateGlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.icon {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ffccd5, #ffe0e5);
+  color: var(--primary-red);
+  box-shadow: 0 8px 16px rgba(230, 57, 70, 0.15);
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-red);
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555555;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(230, 57, 70, 0.08), transparent 70%);
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+.card:hover {
+  transform: translateY(-10px) rotateX(2deg) rotateY(2deg);
+  box-shadow: 0 25px 50px rgba(230, 57, 70, 0.12);
+}
+
+/* Floating animation for cards */
+.card:nth-child(odd) {
+  animation: floatUpDown 4s ease-in-out infinite;
+}
+.card:nth-child(even) {
+  animation: floatUpDown 4s ease-in-out infinite 2s;
+}
+
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 60px 16px; }
+  .heading h2 { font-size: 2rem; }
+}
+
+.circleButton {
+  position: absolute;
+  bottom: 15px;
+  left: 42%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-red);
+  color: #ffffff;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(230, 57, 70, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circleButton:hover {
+  background-color: #d9363d; /* slightly darker on hover */
+}
