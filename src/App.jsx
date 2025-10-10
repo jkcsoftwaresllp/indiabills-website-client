@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './navbar/Navbar'
 import Home from './pages/home/Home'
+import FooterSection from './footer/FooterSection'
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
 
     <Navbar />
     <Home />
+    <FooterSection />
     </>
   )
 }

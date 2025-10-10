@@ -4,6 +4,8 @@ import HeroSection from './HeroSection';
 import MainContainer from '../../components/containers/mainContainer/MainContainer';
 import FeaturesOverview from './homeSections/FeaturesOverview';
 import WhyChooseIndiaBills from './homeSections/WhyChooseIndiaBills';
+import TestimonialsSection from './homeSections/TestimonialsSection';
+import CTASection from './homeSections/CTASection';
 
 function Home() {
     return (
@@ -13,6 +15,8 @@ function Home() {
 
             <FeaturesOverview />
             <WhyChooseIndiaBills />
+            <TestimonialsSection />
+            <CTASection />
         </div>
     )
 }

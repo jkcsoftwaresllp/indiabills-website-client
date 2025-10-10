@@ -96,7 +96,7 @@ body {
 
   /* === Neutral Colors === */
   --text-dark: #100727; /* Primary text color +++++++++++*/
-  --text-light: #ffffff; /* Light text (on dark backgrounds) ++++++++*/
+  --text-light: #2a2a2a; /* Light text (on dark backgrounds) ++++++++*/
   --gray-medium: #2a2a2a; /* Secondary text or muted icons ++++++++*/
   --gray-light: #333; /* Input borders, dividers +++++++++++++*/
   --blue-medium: #005574; /* Secondary text or muted icons ++++++++*/

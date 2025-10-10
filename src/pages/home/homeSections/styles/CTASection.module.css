@@ -1,0 +1,71 @@
+.ctaSection {
+  position: relative;
+  width: 100%;
+  padding: 100px 20px;
+  background: #f8f6f6; /* IndiaBills red */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0px;
+  margin: 50px 0;
+  color: #fff;
+  overflow: hidden;
+  perspective: 1200px;
+  box-shadow: 0 0 60px rgba(230, 57, 70, 0.3);
+  border: 2px solid rgba(255,255,255,0.1);
+  animation: sectionPulse 4s infinite alternate;
+}
+
+/* Section subtle pulse glow */
+@keyframes sectionPulse {
+  0% { box-shadow: 0 0 60px rgba(230, 57, 70, 0.2); }
+  50% { box-shadow: 0 0 90px rgba(230, 57, 70, 0.4); }
+  100% { box-shadow: 0 0 60px rgba(230, 57, 70, 0.2); }
+}
+
+.heading {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 15px rgba(0,0,0,0.2);
+  animation: textGlow 2s infinite alternate;
+  color: #e63946;
+}
+
+.heading span {
+  text-decoration: underline;
+  text-decoration-color: rgba(255,255,255,0.6);
+}
+
+@keyframes textGlow {
+  0% { text-shadow: 2px 2px 15px rgba(0,0,0,0.2); }
+  50% { text-shadow: 0 0 25px rgba(255,255,255,0.7); }
+  100% { text-shadow: 2px 2px 15px rgba(0,0,0,0.2); }
+}
+
+.ctaButton {
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 18px 45px;
+  border: none;
+  border-radius: 50px;
+  background: #fff;
+  color: #e63946;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(230, 57, 70, 0.5);
+  z-index: 2;
+  position: relative;
+}
+
+/* Floating shapes behind */
+.floatingShape {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  filter: blur(50px);
+}
