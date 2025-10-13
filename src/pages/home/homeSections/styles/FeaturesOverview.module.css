@@ -10,19 +10,21 @@
   overflow-x: clip; /* ✅ modern fix */
   overflow-y: hidden;
   position: relative;
-  background: #ffffff;
+  background: var(--primary-white);
 }
 
 .heading h2 {
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--primary-red);
+  font-family: var(--heading-font);
 }
 
 .heading p {
   font-size: 1.1rem;
-  color: #555555;
+  color: var(--text-light);
   margin-top: 8px;
+  font-family: var(--para-font);
 }
 
 /* ✅ contain everything inside grid bounds */
@@ -41,7 +43,7 @@
 }
 
 .card {
-  background: #ffffff;
+  background: var(--primary-white);
   border-radius: 20px;
   padding: 40px 24px;
   box-shadow: 0 15px 35px rgba(230, 57, 70, 0.08);
@@ -89,11 +91,12 @@
   font-size: 1.3rem;
   font-weight: 600;
   color: var(--primary-red);
+  font-family: var(--para-font);
 }
 
 .card p {
   font-size: 1rem;
-  color: #555555;
+  color: var(--text-light);
   margin-top: 10px;
   line-height: 1.6;
 }
@@ -136,6 +139,7 @@
 @media (max-width: 768px) {
   .section {
     padding: 60px 16px;
+    width: 92%;
   }
   .heading h2 {
     font-size: 2rem;
@@ -151,7 +155,7 @@
   height: 40px;
   border-radius: 50%;
   background-color: var(--primary-red);
-  color: #ffffff;
+  color: var(--primary-white);
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
@@ -162,7 +166,7 @@
 }
 
 .circleButton:hover {
-  background-color: #d9363d;
+  background-color: var(--primary-red-dark);
 }
 
 /* ✅ global fallback */

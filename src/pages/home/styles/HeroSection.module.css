@@ -4,7 +4,7 @@
   justify-content: space-between;
   padding: 80px 100px;
   position: relative;
-  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+  background: linear-gradient(180deg, var(--primary-white) 0%, #f8f9fa 100%);
   overflow: hidden;
 }
 
@@ -18,15 +18,18 @@
   font-size: 3.4rem;
   font-weight: 700;
   line-height: 1.2;
-  color: #1a1a1a;
+  color: var(--text-black);
   margin-bottom: 20px;
+  font-family: var(--heading-font);
+  
 }
 
 .heroLeft p {
-  color: #555;
+  color: var(--text-light);
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 36px;
+  font-family: var(--para-font);
 }
 
 /* CTA Buttons */
@@ -34,7 +37,7 @@
   display: flex;
   gap: 18px;
 }
-
+/* 
 .startBtn {
   background-color: #e63946;
   color: #fff;
@@ -70,7 +73,7 @@
   background-color: #e63946;
   color: #fff;
   transform: translateY(-3px);
-}
+} */
 
 /* Right Illustration */
 .heroRight {
@@ -142,7 +145,7 @@
 
 
 .typewriter {
-  color: #e63946;
+  color: var(--primary-red);
   font-weight: 700;
   text-transform: uppercase;
   display: inline-block;

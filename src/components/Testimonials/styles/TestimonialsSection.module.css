@@ -1,0 +1,99 @@
+/* TestimonialsSection.module.css */
+
+.testimonialsSection {
+  width: 100%;
+  padding: 100px 18px;
+  background: linear-gradient(180deg, #fff 0%, #fff7f7 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* floating soft shapes */
+.bgShape {
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  filter: blur(48px);
+  opacity: 0.14;
+  transform: translate3d(0, 0, 0);
+  pointer-events: none;
+}
+
+/* optional future gradients 
+.bgShapeLeft {
+  left: -120px;
+  top: -80px;
+  background: radial-gradient(circle at 30% 30%, #e63946 0%, transparent 40%);
+}
+
+.bgShapeRight {
+  right: -80px;
+  bottom: -100px;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle at 70% 70%, #e63946 0%, transparent 35%);
+}
+*/
+
+/* Heading */
+.heading {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 34px;
+  letter-spacing: -0.02em;
+  font-family: var(--heading-font);
+}
+
+.heading::after {
+  content: "";
+  display: block;
+  width: 96px;
+  height: 6px;
+  background: linear-gradient(90deg, #e63946 0%, #ff6b6b 100%);
+  margin: 12px auto 0;
+  border-radius: 6px;
+}
+
+/* Swiper wrapper */
+.swiperContainer {
+  width: min(1300px, 95%);
+  margin: 0 auto;
+  padding-bottom: 24px;
+}
+
+/* Swiper pagination styling */
+.swiper-pagination-bullet {
+  background: rgba(230, 57, 70, 0.9) !important;
+  width: 10px;
+  height: 10px;
+  opacity: 0.5;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.swiper-pagination-bullet-active {
+  transform: scale(1.25);
+  opacity: 1;
+  box-shadow: 0 6px 18px rgba(230, 57, 70, 0.18);
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .testimonialsSection {
+    padding: 60px 0px;
+  }
+  .swiperContainer {
+    width: 96%;
+  }
+  .heading {
+    font-size: 1.8rem;
+  }
+}

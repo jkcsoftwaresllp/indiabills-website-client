@@ -61,20 +61,17 @@ body {
   /* --maximum-responsive-width: 2000px; */ /* Max container width for large screens */
 
   /* === fonts === */
-  --heading-font: "Fjalla One", sans-serif; /* +++++++++++++ */
-  --para-font: sans-serif; /* +++++++++++++ */
-  --secondary-font: "M PLUS Rounded 1c", sans-serif; /* +++++++++++++ */
+  --heading-font: "Archivo Black", cursive; /* +++++++++++++ */
+  --para-font: "M PLUS Rounded 1c", sans-serif; /* +++++++++++++ */
+  --secondary-font: "Pacifico", sans-serif; /* +++++++++++++ */
 
   /* === Primary Theme Colors === */
   --primary-red: #e63946; /* Main brand color (buttons, links) +++++++++*/
-  --primary-blue-light: rgb(
-    114,
-    188,
-    193
-  ); /* Hover background or soft accent +++++++++*/
-  --primary-blue-dark: #4b1a7a; /* Active/focus state of primary color +++++++++*/
+  --primary-white: #ffffff; /* Hover background or soft accent +++++++++*/
+  --primary-red-dark: #d62839; /* Active/focus state of primary color +++++++++*/
 
   --background-white: #ffffff; /* Page background color */
+  --background-black: #0d0d0d; /* Page background color */
   --surface-white: #fefefe; /* Card or modal background */
 
   /* === Accent / Semantic Colors === */
@@ -95,8 +92,9 @@ body {
   --error-dark: #b91c1c; /* Error text or emphasis */
 
   /* === Neutral Colors === */
-  --text-dark: #100727; /* Primary text color +++++++++++*/
-  --text-light: #2a2a2a; /* Light text (on dark backgrounds) ++++++++*/
+  --text-dark: #333; /* Primary text color +++++++++++*/
+  --text-light: #555555; /* Light text (on dark backgrounds) ++++++++*/
+  --text-white: #fff; /* Light text (on dark backgrounds) ++++++++*/
   --gray-medium: #2a2a2a; /* Secondary text or muted icons ++++++++*/
   --gray-light: #333; /* Input borders, dividers +++++++++++++*/
   --blue-medium: #005574; /* Secondary text or muted icons ++++++++*/

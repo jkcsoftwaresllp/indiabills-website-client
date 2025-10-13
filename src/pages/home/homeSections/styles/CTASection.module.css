@@ -1,71 +1,57 @@
-.ctaSection {
-  position: relative;
+.container {
   width: 100%;
-  padding: 100px 20px;
-  background: #f8f6f6; /* IndiaBills red */
+  height: 80vh; /* full screen height */
+  background: #ff2222;
+  color: #0a0a0a;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  border-radius: 0px;
-  margin: 50px 0;
-  color: #fff;
+  align-items: center;
   overflow: hidden;
-  perspective: 1200px;
-  box-shadow: 0 0 60px rgba(230, 57, 70, 0.3);
-  border: 2px solid rgba(255,255,255,0.1);
-  animation: sectionPulse 4s infinite alternate;
+  position: relative;
+  /* font-family: "Playfair Display", serif; */
 }
 
-/* Section subtle pulse glow */
-@keyframes sectionPulse {
-  0% { box-shadow: 0 0 60px rgba(230, 57, 70, 0.2); }
-  50% { box-shadow: 0 0 90px rgba(230, 57, 70, 0.4); }
-  100% { box-shadow: 0 0 60px rgba(230, 57, 70, 0.2); }
+.text {
+  font-size: clamp(3rem, 8vw, 9rem);
+  font-weight: 800;
+  letter-spacing: -1px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  /* opacity: 0.15; */
+  line-height: 1.1;
 }
 
-.heading {
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: 40px;
-  text-shadow: 2px 2px 15px rgba(0,0,0,0.2);
-  animation: textGlow 2s infinite alternate;
-  color: #e63946;
+.line1 {
+  color: #fffefe;
 }
 
-.heading span {
-  text-decoration: underline;
-  text-decoration-color: rgba(255,255,255,0.6);
+.line2 {
+  color: var(--text-black);
 }
 
-@keyframes textGlow {
-  0% { text-shadow: 2px 2px 15px rgba(0,0,0,0.2); }
-  50% { text-shadow: 0 0 25px rgba(255,255,255,0.7); }
-  100% { text-shadow: 2px 2px 15px rgba(0,0,0,0.2); }
+.ctaContainer {
+  position: absolute;
+  bottom: 10%;
+  display: flex;
+  justify-content: center;
 }
 
 .ctaButton {
-  font-size: 1.3rem;
-  font-weight: 700;
-  padding: 18px 45px;
+  background: var(--text-white);
+  color: var(--primary-red);
+  padding: 16px 36px;
   border: none;
   border-radius: 50px;
-  background: #fff;
-  color: #e63946;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(230, 57, 70, 0.5);
-  z-index: 2;
-  position: relative;
 }
 
-/* Floating shapes behind */
-.floatingShape {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 50%;
-  filter: blur(50px);
+.ctaButton:hover {
+  background: #ffd3d3;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px #ff0000;
 }

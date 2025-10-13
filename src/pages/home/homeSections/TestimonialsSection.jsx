@@ -8,46 +8,9 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination, EffectCoverflow } from "swiper/modules";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { testimonials } from "./helper/testimonials";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const testimonials = [
-  {
-    name: "Aarav Sharma",
-    role: "Retail Business Owner",
-    text:
-      "IndiaBills has simplified my billing process completely. The UI is intuitive, and it saves me hours every week!",
-  },
-  {
-    name: "Priya Patel",
-    role: "CA & Financial Consultant",
-    text:
-      "The GST features are top-notch! Managing invoices and tax reports has never been this effortless.",
-  },
-  {
-    name: "Rohan Verma",
-    role: "Distributor, FMCG",
-    text:
-      "Excellent product with reliable support. IndiaBills made my business operations smoother and faster.",
-  },
-  {
-    name: "Sneha Mehta",
-    role: "Boutique Owner",
-    text: "Love the clean design and easy reports. Perfect for small businesses like mine!",
-  },
-  {
-    name: "Kunal Singh",
-    role: "Electronics Store Owner",
-    text:
-      "Incredible experience — especially the dashboard insights and invoice customization!",
-  },
-  {
-    name: "Neha Gupta",
-    role: "Freelance Designer",
-    text:
-      "The automation features are brilliant. I can focus on my work without worrying about accounts.",
-  },
-];
 
 export default function TestimonialsSection() {
   const sectionRef = useRef(null);
@@ -136,6 +99,41 @@ export default function TestimonialsSection() {
     }
   };
 
+  // Render stars for a testimonial.
+  // Accepts: testimonial object `t` which may contain:
+  // - t.stars: number (0-5) or string of star characters (e.g. "★★★")
+  // - t.rating: number (optional)
+  // Fallbacks to 5 stars when no rating provided.
+  const renderStars = (t) => {
+    const MAX = 5;
+    let count = MAX;
+
+    if (t == null) count = 0;
+    else if (typeof t.stars === "number") count = t.stars;
+    else if (typeof t.stars === "string") {
+      // if string contains star characters, count them; otherwise use string length
+      const onlyStars = (t.stars.match(/★/g) || []).length;
+      count = onlyStars || t.stars.length || MAX;
+    } else if (typeof t.rating === "number") {
+      // round rating to nearest integer for display
+      count = Math.round(t.rating);
+    }
+
+    // clamp between 0 and MAX
+    count = Math.max(0, Math.min(MAX, Number(count) || 0));
+
+    // produce filled and empty stars to always show MAX symbols
+    const stars = [];
+    for (let i = 0; i < MAX; i++) {
+      stars.push(
+        <span key={i} aria-hidden="true">
+          {i < count ? "★" : "☆"}
+        </span>
+      );
+    }
+    return <>{stars}</>;
+  };
+
   return (
     <section className={styles.testimonialsSection} ref={sectionRef}>
       {/* Soft floating shapes behind the content */}
@@ -204,8 +202,8 @@ export default function TestimonialsSection() {
 
               <div className={styles.cardFooter}>
                 <div className={styles.rating} aria-hidden="true">
-                  {/* 5 tiny hearts/stars */}
-                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  {/* stars based on testimonial data */}
+                  {renderStars(t)}
                 </div>
               </div>
             </article>

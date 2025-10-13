@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import Lottie from "lottie-react";
 import { TypeAnimation } from "react-type-animation";
 import billingAnimation from "../../assets/billing-3d.json";
+import CommonButton from "../../components/buttons/CommonButton";
 
 function HeroSection() {
   const textRef = useRef(null);
@@ -61,8 +62,10 @@ function HeroSection() {
         </p>
 
         <div className={styles.ctaButtons}>
-          <button className={styles.startBtn}>Start Free Trial</button>
-          <button className={styles.demoBtn}>Watch Demo</button>
+          {/* <button className={styles.startBtn}>Start Free Trial</button>
+          <button className={styles.demoBtn}>Watch Demo</button> */}
+          <CommonButton />
+          <CommonButton label={"Watch Demo"} white={1} />
         </div>
       </div>
 

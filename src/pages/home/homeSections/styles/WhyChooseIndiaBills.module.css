@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   gap: 2rem;
   padding: 80px 2rem;
-  background-color: #f9f9f9;
+  background-color: var(--primary-white);
   align-items: center;
   justify-content: center;
 }
@@ -33,13 +33,15 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: #e53935; /* IndiaBills primary red */
+  color: var(--primary-red); 
+  font-family: var(--heading-font);
 }
 
 .subheading {
   font-size: 1.1rem;
   margin-bottom: 2rem;
-  color: #555;
+  color: var(--text-light);
+  font-family: var(--para-font);
 }
 
 .featuresList {
@@ -52,7 +54,7 @@
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  background: #fff;
+  background: var(--text-white);
   padding: 1rem 1.2rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -60,7 +62,7 @@
 
 .check {
   font-size: 1.5rem;
-  color: #e53935;
+  color: var(--primary-red);
   margin-top: 4px;
 }
 
@@ -68,12 +70,14 @@
   margin: 0;
   font-size: 1.1rem;
   font-weight: 600;
+  font-family: var(--para-font);
 }
 
 .featureItem p {
   margin: 0.2rem 0 0 0;
   font-size: 0.95rem;
   color: #666;
+  font-family: var(--para-font);
 }
 
 /* Responsive */
