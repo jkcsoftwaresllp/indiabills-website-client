@@ -4,8 +4,9 @@ import HeroSection from './HeroSection';
 import MainContainer from '../../components/containers/mainContainer/MainContainer';
 import FeaturesOverview from './homeSections/FeaturesOverview';
 import WhyChooseIndiaBills from './homeSections/WhyChooseIndiaBills';
-import TestimonialsSection from './homeSections/TestimonialsSection';
+// import TestimonialsSection from './homeSections/TestimonialsSection';
 import CTASection from './homeSections/CTASection';
+import TestimonialsSection from '../../components/Testimonials/TestimonialsSection';
 
 function Home() {
     return (
@@ -15,6 +16,7 @@ function Home() {
 
             <FeaturesOverview />
             <WhyChooseIndiaBills />
+            {/* <TestimonialsSection /> */}
             <TestimonialsSection />
             <CTASection />
         </div>

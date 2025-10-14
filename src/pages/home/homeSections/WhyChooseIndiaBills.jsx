@@ -4,16 +4,10 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lottie from "lottie-react";
 import dashboardLottie from '../../../assets/Dashboard.json';
+import { features2 } from "./helper/features2";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const features = [
-  { title: "Easy to Use", desc: "No technical knowledge required" },
-  { title: "24x7 Support", desc: "Always here to help" },
-  { title: "Trusted by Thousands", desc: "Businesses across India rely on us" },
-  { title: "99.9% Data Uptime", desc: "Reliable and secure" },
-  { title: "Customizable Plans", desc: "Tailored to your business needs" },
-];
 
 const WhyChooseIndiaBills = () => {
   const featureRefs = useRef([]);
@@ -66,7 +60,7 @@ const WhyChooseIndiaBills = () => {
           Empowering businesses with smarter billing solutions
         </p>
         <div className={styles.featuresList}>
-          {features.map((feature, i) => (
+          {features2.map((feature, i) => (
             <div
               key={i}
               ref={(el) => (featureRefs.current[i] = el)}

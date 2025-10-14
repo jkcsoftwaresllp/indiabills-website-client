@@ -1,22 +1,36 @@
-import React, { useRef } from "react";
+import React from "react";
+import { motion } from "framer-motion";
 import styles from "./styles/MainContainer.module.css";
 
-function MainContainer({ heading, subHeading1, subHeading2, textInRed, children }) {
+const MainContainer = ({ heading, subHeading, children, id }) => {
+  return (
+    <section className={styles.container} id={id}>
+      <div className={styles.heading}>
+        {heading && (
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            {heading}
+          </motion.h2>
+        )}
+        {subHeading && (
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+          >
+            {subHeading}
+          </motion.p>
+        )}
+      </div>
 
-    return (
-        <section className={styles.container}>
-            <div>
-                <h1>{heading}</h1>
-                <h2>
-                    {subHeading1}
-                    <br />
-                    {subHeading2}
-                    <span>{textInRed}</span>
-                </h2>
-            </div>
-            {children}
-        </section>
-    );
-}
+      <div className={styles.content}>{children}</div>
+    </section>
+  );
+};
 
 export default MainContainer;
