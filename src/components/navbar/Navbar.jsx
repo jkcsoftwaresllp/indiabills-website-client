@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styles from "./styles/Navbar.module.css";
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
 import { Menu, X, ChevronDown } from "lucide-react";
-import CommonButton from "../components/buttons/CommonButton";
+import CommonButton from "../buttons/CommonButton";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);

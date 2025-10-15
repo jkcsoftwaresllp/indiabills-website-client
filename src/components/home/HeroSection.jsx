@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import Lottie from "lottie-react";
 import { TypeAnimation } from "react-type-animation";
 import billingAnimation from "../../assets/billing-3d.json";
-import CommonButton from "../../components/buttons/CommonButton";
+import CommonButton from "../buttons/CommonButton";
 
 function HeroSection() {
   const textRef = useRef(null);
@@ -43,12 +43,18 @@ function HeroSection() {
           <span className={styles.typewriter}>
             <TypeAnimation
               sequence={[
-                "Fast Businesses", 2000,
-                "", 300,
-                "Reliable Teams", 2000,
-                "", 300,
-                "Rising Brands", 2000,
-                "", 300,
+                "Fast Businesses",
+                2000,
+                "",
+                300,
+                "Reliable Teams",
+                2000,
+                "",
+                300,
+                "Rising Brands",
+                2000,
+                "",
+                300,
               ]}
               wrapper="span"
               speed={70}
@@ -58,12 +64,11 @@ function HeroSection() {
         </h1>
 
         <p>
-          IndiaBills helps you manage billing, GST invoices, inventory & reporting seamlessly.
+          IndiaBills helps you manage billing, GST invoices, inventory & reporting
+          seamlessly.
         </p>
 
         <div className={styles.ctaButtons}>
-          {/* <button className={styles.startBtn}>Start Free Trial</button>
-          <button className={styles.demoBtn}>Watch Demo</button> */}
           <CommonButton />
           <CommonButton label={"Watch Demo"} white={1} />
         </div>
