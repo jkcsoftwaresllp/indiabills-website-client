@@ -6,6 +6,7 @@ import FeaturesOverview from './home/homeSections/FeaturesOverview';
 import WhyChooseIndiaBills from './home/homeSections/WhyChooseIndiaBills';
 import CTASection from './home/homeSections/CTASection';
 import TestimonialsSection from '../components/Testimonials/TestimonialsSection';
+import billingAnimation from '../assets/lottie/billing-3d.json'
 
 function Home() {
     return (

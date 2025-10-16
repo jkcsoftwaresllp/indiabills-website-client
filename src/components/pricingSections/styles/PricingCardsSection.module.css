@@ -1,0 +1,147 @@
+:root {
+  --primary-red: #e63946;
+}
+
+.section {
+  padding: 100px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: var(--primary-red);
+}
+
+.toggleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+.cardsContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  background: #fff;
+  border: 2px solid var(--primary-red);
+  border-radius: 20px;
+  padding: 30px;
+  width: 280px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.popular {
+  border: 2px solid var(--primary-red);
+  transform: scale(1.1);
+}
+
+.popularBadge {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: var(--primary-red);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.cardHeader h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--primary-red);
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.features li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.featuresAvailable::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: green;
+}
+.featuresUnavailable::before {
+  content: "✗";
+  position: absolute;
+  left: 0;
+  color: red
+}
+
+.button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 50px;
+  background: var(--primary-red);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}

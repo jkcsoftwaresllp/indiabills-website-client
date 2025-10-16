@@ -3,7 +3,7 @@ import styles from "./styles/WhyChooseIndiaBills.module.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lottie from "lottie-react";
-import dashboardLottie from '../../../assets/Dashboard.json';
+import dashboardLottie from '../../../assets/lottie/Dashboard.json';
 import { features2 } from "./helper/features2";
 
 gsap.registerPlugin(ScrollTrigger);

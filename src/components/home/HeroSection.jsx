@@ -3,10 +3,10 @@ import styles from "./styles/HeroSection.module.css";
 import { gsap } from "gsap";
 import Lottie from "lottie-react";
 import { TypeAnimation } from "react-type-animation";
-import billingAnimation from "../../assets/billing-3d.json";
+import billingAnimation from "../../assets/lottie/billing-3d.json";
 import CommonButton from "../buttons/CommonButton";
 
-function HeroSection() {
+function HeroSection({ title, desc, typeWriterText1, typeWriterText2, typeWriterText3, lottie }) {
   const textRef = useRef(null);
   const imgRef = useRef(null);
 
@@ -39,19 +39,19 @@ function HeroSection() {
       {/* Left Content */}
       <div className={styles.heroLeft} ref={textRef}>
         <h1>
-          Smart Billing & Inventory for <br />
+          {title || "Smart Billing & Inventory for" } <br />
           <span className={styles.typewriter}>
             <TypeAnimation
               sequence={[
-                "Fast Businesses",
+                typeWriterText1 || "Fast Businesses" ,
                 2000,
                 "",
                 300,
-                "Reliable Teams",
+                typeWriterText2 || "Reliable Teams",
                 2000,
                 "",
                 300,
-                "Rising Brands",
+                typeWriterText3 || "Rising Brands",
                 2000,
                 "",
                 300,
@@ -64,8 +64,7 @@ function HeroSection() {
         </h1>
 
         <p>
-          IndiaBills helps you manage billing, GST invoices, inventory & reporting
-          seamlessly.
+          {desc || `IndiaBills helps you manage billing, GST invoices, inventory & reporting seamlessly.`}
         </p>
 
         <div className={styles.ctaButtons}>
@@ -76,7 +75,7 @@ function HeroSection() {
 
       {/* Right Illustration */}
       <div className={styles.heroRight} ref={imgRef}>
-        <Lottie animationData={billingAnimation} loop={true} />
+        <Lottie animationData={lottie || billingAnimation } loop={true} />
       </div>
 
       {/* Decorative Glow Background */}

@@ -108,4 +108,5 @@
   text-transform: uppercase;
   display: inline-block;
   min-width: 200px; /* Keeps spacing even when text changes */
+  margin-top: 40px;
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./styles/Navbar.module.css";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/images/logo.png";
 import { Menu, X, ChevronDown } from "lucide-react";
 import CommonButton from "../buttons/CommonButton";
 
@@ -28,8 +28,8 @@ function Navbar() {
       <div
         className={`${styles.navLinks} ${menuOpen ? styles.navActive : ""}`}
       >
-        <a href="#">Features</a>
-        <a href="#">Pricing</a>
+        <a href="/">Features</a>
+        <a href="/pricing">Pricing</a>
 
         {/* Support Dropdown */}
         <div
