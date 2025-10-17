@@ -59,7 +59,6 @@ const ScrollingTextCTA = () => {
       </h1>
 
       <div className={styles.ctaContainer}>
-        {/* <button className={styles.ctaButton}>Get Started</button> */}
         <CommonButton white={1} />
       </div>
     </section>
