@@ -44,7 +44,7 @@ function Navbar() {
               supportOpen ? styles.showDropdown : ""
             }`}
           >
-            <a href="#">Get Support</a>
+            <a href="/get-support">Get Support</a>
             <a href="#">IndiaBills Product Training</a>
             <a href="#">IndiaBills Community</a>
           </div>
@@ -55,7 +55,7 @@ function Navbar() {
 
       {/* Right Section */}
       <div className={styles.rightMenu}>
-        <a href="#">Company</a>
+        <a href="/company">Company</a>
         <button className={styles.demoBtn}>Start Demo / Login</button>
         {/* <CommonButton label={"Start Demo / Login"} /> */}
       </div>

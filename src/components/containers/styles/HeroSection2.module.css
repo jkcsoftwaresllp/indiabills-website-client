@@ -1,0 +1,44 @@
+.Container {
+  position: relative;
+  background: url('../../../assets/images/headerImg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  height: 350px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.Container::before {
+  content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgb(255, 0, 0);
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.Container>h1 {
+    z-index: 111;
+    color: var(--text-light);
+    margin-top: 100px;
+    z-index: 10;
+    font-size: 70px;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    width: 100%;
+    font-family: var(--heading-font);
+    letter-spacing: 5px;
+}
+
+.Container>h1>p{
+    font-size: 20px;
+    width: 60%;
+    margin: auto;
+    margin-top: 30px;
+    line-height: 1.7;
+}
