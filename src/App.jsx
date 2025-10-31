@@ -6,6 +6,7 @@ import Pricing from './pages/Pricing'
 import { Route, Routes } from 'react-router-dom'
 import Company from './pages/Company'
 import GetSupport from './pages/GetSupport'
+import Blogs from './pages/Blogs'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/company" element={<Company />} />
         <Route path="/get-support" element={<GetSupport />} />
+        <Route path="/blogs" element={<Blogs />} />
       </Routes>
       
       <FooterSection />

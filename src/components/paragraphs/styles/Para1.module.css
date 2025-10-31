@@ -1,0 +1,149 @@
+/* ------------------= */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 100px;
+  flex-wrap: wrap;
+  margin-bottom: 90px;
+}
+
+.right,
+.left {
+  width: 50%;
+  height: 100%;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 600px; 
+  margin-top: 50px;
+  margin-left: 150px;
+  /* background-color: rgb(253 230 138); */
+}
+
+.heading>h1,
+.heading>span {
+  font-size: 2rem;
+  letter-spacing: 0.01rem;
+  line-height: 1.2;
+  font-family: var(--heading-font);
+  margin: auto;
+  margin-left: 0px;
+}
+
+.heading>h1 {
+  font-weight: 100;
+  color: var(--text-dark);
+  margin-top: 50px;
+}
+
+.heading>span {
+  font-weight: 900;
+  color: var(--primary-red);
+  margin-top: 10px;
+}
+
+.text {
+  font-size: 1.1rem;
+  letter-spacing: 0.01rem;
+  line-height: 1.8;
+  font-family: var(--para-font);
+  font-weight: 400;
+  color: var(--text-dark);
+  width: 600px;
+  margin-top: 40px;
+  margin-left: 150px;
+  /* background-color: rgb(251 191 36); */
+}
+
+.text>p {
+  margin-top: 20px;
+}
+
+.text>p>span {
+  color: var(--primary-red);
+  font-weight: 700;
+}
+
+.left>img {
+  width: 40%;
+  object-fit: cover;
+  margin-left: 250px;
+  margin-top: 200px;
+}
+
+/* -------------------- Responsive Styles -------------------- */
+
+@media (max-width: 1024px) {
+  .text {
+    width: 90%;
+    margin-left: 0;
+  }
+
+  .left>img {
+    width: 70%;
+    margin-left: 0;
+    margin-top: 100px;
+  }
+
+  .heading {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .heading>h1,
+  .heading>span {
+    font-size: 2.5rem;
+    width: 100%;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+    padding: 0 20px;
+  }
+
+  .right,
+  .left {
+    width: 100%;
+  }
+
+  .text {
+    width: 100%;
+    margin-left: 0;
+    font-size: 1rem;
+    /* text-align: center; */
+  }
+
+  .left>img {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 50px;
+  }
+
+  .heading>h1,
+  .heading>span {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .heading>h1,
+  .heading>span {
+    font-size: 1.8rem;
+  }
+
+  .text {
+    font-size: 0.95rem;
+  }
+}

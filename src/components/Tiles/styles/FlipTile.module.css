@@ -1,0 +1,144 @@
+.flipCard {
+  width: 350px;
+  height: 420px;
+  perspective: 1000px;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.flipInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.flipCard:hover .flipInner {
+  transform: rotateY(180deg);
+}
+
+.flipFront {
+  background-color: white;
+  height: 350px;
+  width: 350px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 0px;
+}
+
+.flipFront h1 {
+  color: var(--primary-red);
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  font-family: Lato, sans-serif;
+  font-size: 3.563rem;
+  line-height: 150%;
+  width: 250px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.flipFront p {
+  font-size: 1.5rem;
+  letter-spacing: 0.01rem;
+  line-height: 1.2;
+  font-family: var(--heading-font);
+  font-weight: 400;
+  color: var(--text-dark);
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+
+/* Back */
+.flipBack {
+  background-color: var(--primary-red);
+  color: white;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  font-size: 1.2rem;
+  /* font-family: var(--secondary-font); */
+  text-align: center;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+/* ---------------------------= */
+
+/* Mobile flip support */
+.mobileFlipped .flipInner {
+  transform: rotateY(180deg);
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+  .flipCard {
+    width: 90%;
+    height: 250px;
+    padding-top: 30px;
+  }
+
+  .flipInner {
+    height: 250px;
+  }
+
+  .flipFront,
+  .flipBack {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+  }
+
+  .flipFront h1 {
+    font-size: 2.6rem;
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    height: 100px;
+  }
+
+  .flipFront p {
+    font-size: 1.2rem;
+    width: 90%;
+  }
+
+  .flipBack {
+    padding: 20px;
+    font-size: 1rem;
+    height: 160px;
+    width: 85%;
+  }
+
+  .logo {
+    width: 70px;
+    height: 70px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+}

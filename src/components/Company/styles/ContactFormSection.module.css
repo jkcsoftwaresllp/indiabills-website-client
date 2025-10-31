@@ -19,7 +19,6 @@
   width: 80%;
   max-width: 400px;
   object-fit: contain;
-  /* filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.15)); */
 }
 
 .right {
@@ -54,15 +53,16 @@
 
 .form input,
 .form textarea {
-  width: 100%;
+  width: 94.5%;
   padding: 14px 16px;
-  border-radius: 10px;
+  border-radius: 2px;
   border: 1px solid rgba(0, 0, 0, 0.15);
   outline: none;
   font-size: 16px;
   transition: all 0.3s ease;
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);
+  resize: none;
 }
 
 .form input:focus,
@@ -79,7 +79,7 @@
   color: #fff;
   background: linear-gradient(90deg, var(--primary-red), #ff5858);
   border: none;
-  border-radius: 10px;
+  border-radius: 3px;
   cursor: pointer;
   transition: all 0.4s ease;
   background-size: 200%;

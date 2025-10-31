@@ -1,0 +1,32 @@
+.blogsPage {
+  width: 100%;
+  overflow: hidden;
+}
+
+.featuredSection {
+  margin: 3rem auto 2rem;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.blogGridSection {
+  margin: 3rem auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.blogGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .featuredSection {
+    margin: 2rem auto 1rem;
+  }
+
+  .blogGrid {
+    gap: 1.5rem;
+  }
+}

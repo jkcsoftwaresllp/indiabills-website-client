@@ -50,7 +50,7 @@ function Navbar() {
           </div>
         </div>
 
-        <a href="#">Blogs</a>
+        <a href="/blogs">Blogs</a>
       </div>
 
       {/* Right Section */}
