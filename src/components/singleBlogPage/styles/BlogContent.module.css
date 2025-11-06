@@ -1,0 +1,153 @@
+.blogContent {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  color: #1f2937;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* Rich Text Styling */
+.contentBody h2 {
+  font-size: 1.6rem;
+  color: #111827;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contentBody h3 {
+  font-size: 1.3rem;
+  color: #1f2937;
+  margin-top: 1.5rem;
+}
+
+.contentBody p {
+  margin-bottom: 1.2rem;
+}
+
+.contentBody img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+  object-fit: cover;
+}
+
+/* Quote Box */
+.quote {
+  margin: 2.5rem 0;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #2563eb;
+  border-left: 4px solid #3b82f6;
+  padding-left: 1rem;
+  background: #eff6ff;
+  border-radius: 6px;
+}
+
+/* Share Section */
+.shareSection {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.shareTitle {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #374151;
+}
+
+.shareButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.shareBtn {
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.shareBtn:hover {
+  transform: translateY(-2px);
+}
+
+.twitter {
+  background-color: #1da1f2;
+}
+
+.linkedin {
+  background-color: #0077b5;
+}
+
+.facebook {
+  background-color: #1877f2;
+}
+
+/* Author Box */
+.authorBox {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.authorImage {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.authorName {
+  font-weight: 700;
+  color: #111827;
+}
+
+.authorBio {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+/* Prev/Next Links */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  font-weight: 500;
+}
+
+.navLink {
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navLink:hover {
+  color: #1e40af;
+}
+
+@media (max-width: 640px) {
+  .blogContent {
+    padding: 2rem 1rem;
+  }
+
+  .authorBox {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .authorImage {
+    width: 60px;
+    height: 60px;
+  }
+}

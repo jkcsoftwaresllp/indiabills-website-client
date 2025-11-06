@@ -1,0 +1,32 @@
+.singleBlog {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.blogContent {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #1f2937;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.1rem;
+  color: #6b7280;
+}
+
+.blogContent h2 {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  color: #111827;
+}
+
+.blogContent img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+}

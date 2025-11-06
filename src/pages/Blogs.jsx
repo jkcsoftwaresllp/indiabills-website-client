@@ -1,17 +1,37 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import HeroSection2 from "../components/containers/HeroSection2";
 import FeaturedBlog from "../components/blogs/FeaturedBlog";
 import FilterTabs from "../components/blogs/FilterTabs";
 import BlogCard from "../components/blogs/BlogCard";
-// import CTASection from "../components/sections/CTASection";
-import { blogsData } from "./helper/blogsData";
+// import { blogsData } from "./helper/blogsData";
 import styles from "./styles/Blogs.module.css";
 import ScrollingTextCTA from "./home/homeSections/CTASection";
+import api from "../api/api";
+import { Link } from "react-router-dom";
 
 function Blogs() {
-  const [activeCategory, setActiveCategory] = useState("All");
 
+  const [blogsData, setBlogsData] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [activeCategory, setActiveCategory] = useState("All");
   const categories = ["All", "Product Updates", "Tips", "Business", "Guides"];
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const res = await api.get("/blogs")
+        // console.log(res)
+        setBlogsData(res.data)
+      } catch (error) {
+        console.error("Error fetching blogs data:", error)
+      } finally {
+        setLoading(false)
+      }
+    }
+    fetchBlogs();
+  }, [])
+
+  if (loading) return <div>Loading...</div>;
 
   const filteredBlogs =
     activeCategory === "All"
@@ -47,12 +67,13 @@ function Blogs() {
       <section className={styles.blogGridSection}>
         <div className={styles.blogGrid}>
           {filteredBlogs.map((blog) => (
-            <BlogCard key={blog.id} {...blog} />
+            <Link to={`/blogs/${blog.id}`} key={blog.id} style={{ textDecoration: "none", color: "inherit" }}>
+              <BlogCard {...blog} />
+            </Link>
           ))}
         </div>
       </section>
 
-      {/* CTA Section */}
       <ScrollingTextCTA />
     </div>
   );

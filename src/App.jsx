@@ -7,6 +7,7 @@ import { Route, Routes } from 'react-router-dom'
 import Company from './pages/Company'
 import GetSupport from './pages/GetSupport'
 import Blogs from './pages/Blogs'
+import SingleBlogPage from './pages/SingleBlogPage'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/company" element={<Company />} />
         <Route path="/get-support" element={<GetSupport />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blogs/:id" element={<SingleBlogPage />} />
       </Routes>
       
       <FooterSection />
