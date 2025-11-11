@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./styles/BlogHero.module.css";
+import exImage from '../../assets/images/headerImg.jpg'
 
 const BlogHero = ({
     title = "Untitled Blog",
@@ -7,7 +8,7 @@ const BlogHero = ({
     date,
     category = "General",
     readingTime = "5 min read",
-    coverImage,
+    coverImage = exImage,
 }) => {
     return (
         <section className={styles.blogHero}>
