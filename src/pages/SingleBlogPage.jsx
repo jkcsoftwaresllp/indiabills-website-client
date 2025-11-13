@@ -6,6 +6,7 @@ import HeroSection2 from "../components/containers/HeroSection2";
 import api from "../api/api";
 import BlogContent from "../components/singleBlogPage/BlogContent";
 import exImage from '../assets/images/headerImg.jpg'
+import AutoSlideTile from "../components/Tiles/AutoSlideTile";
 
 const SingleBlogPage = () => {
     const { id } = useParams();
@@ -43,9 +44,7 @@ const SingleBlogPage = () => {
                 readingTime={blog.readingTime || "5 min read"}
                 coverImage={blog.image_url ? `${backendUrl}${blog.image_url}` : exImage}
             />
-            {/* <div className={styles.blogContent}>
-                <div dangerouslySetInnerHTML={{ __html: blog.content }} />
-            </div> */}
+            {/* <AutoSlideTile/> */}
             <BlogContent
                 content={blog.content}
                 authorName={blog.author}

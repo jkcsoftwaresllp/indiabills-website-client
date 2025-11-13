@@ -5,55 +5,93 @@
   color: #1f2937;
   font-size: 1.05rem;
   line-height: 1.8;
+  animation: fadeIn 0.8s ease;
+}
+
+/* Fade Animations */
+.fadeIn {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.fadeInUp {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+[data-section] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 /* Rich Text Styling */
 .contentBody h2 {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   color: #111827;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
 .contentBody h3 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: #1f2937;
   margin-top: 1.5rem;
 }
 
 .contentBody p {
   margin-bottom: 1.2rem;
+  color: #374151;
 }
 
 .contentBody img {
   width: 100%;
-  border-radius: 10px;
-  margin: 1.5rem 0;
+  border-radius: 12px;
+  margin: 1.8rem 0;
   object-fit: cover;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* Quote Box */
+.contentBody img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Quote */
 .quote {
-  margin: 2.5rem 0;
+  margin: 3rem 0;
   font-style: italic;
-  font-size: 1.2rem;
-  color: #2563eb;
-  border-left: 4px solid #3b82f6;
-  padding-left: 1rem;
-  background: #eff6ff;
-  border-radius: 6px;
+  font-size: 1.3rem;
+  color: #0ea5e9;
+  border-left: 4px solid #0ea5e9;
+  padding: 1rem 1.2rem;
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+  border-radius: 8px;
+  position: relative;
+}
+
+.quote::before {
+  content: "“";
+  font-size: 3rem;
+  color: #0ea5e9;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+  opacity: 0.2;
 }
 
 /* Share Section */
 .shareSection {
-  margin: 3rem 0;
+  margin: 4rem 0;
   text-align: center;
 }
 
 .shareTitle {
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #374151;
+  color: #1e293b;
+  font-size: 1.1rem;
 }
 
 .shareButtons {
@@ -64,17 +102,21 @@
 }
 
 .shareBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
   border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
+  padding: 0.7rem 1.3rem;
+  border-radius: 8px;
   font-weight: 500;
   color: white;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .shareBtn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .twitter {
@@ -91,14 +133,21 @@
 
 /* Author Box */
 .authorBox {
-  margin-top: 3rem;
+  margin-top: 3.5rem;
   display: flex;
   align-items: center;
-  gap: 1rem;
-  background: #f9fafb;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  gap: 1.2rem;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(12px);
+  padding: 1.8rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.authorBox:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
 }
 
 .authorImage {
@@ -122,20 +171,26 @@
 .navigation {
   display: flex;
   justify-content: space-between;
-  margin-top: 3rem;
+  margin-top: 4rem;
   font-weight: 500;
+  align-items: center;
 }
 
 .navLink {
-  color: #2563eb;
+  color: #0ea5e9;
   text-decoration: none;
-  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .navLink:hover {
-  color: #1e40af;
+  color: #0369a1;
+  transform: translateY(-2px);
 }
 
+/* Responsive */
 @media (max-width: 640px) {
   .blogContent {
     padding: 2rem 1rem;

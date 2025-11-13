@@ -5,14 +5,16 @@
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  margin-top: 0;
 }
 
 .title {
-  font-size: 1.8rem;
+  font-size: 2.8rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
   text-align: center;
   color: #1e293b;
+  font-family: var(--heading-font);
 }
 
 .form {
@@ -29,6 +31,7 @@
 .field label {
   font-weight: 500;
   margin-bottom: 0.4rem;
+  color: var(--primary-red);
 }
 
 .field input,
@@ -40,10 +43,12 @@
   outline: none;
   transition: border 0.2s ease;
 }
-
+.field textarea {
+  color: rgb(44, 145, 208);
+}
 .field input:focus,
 .field textarea:focus {
-  border-color: #3b82f6;
+  border-color: var(--primary-red);
 }
 
 .preview {
