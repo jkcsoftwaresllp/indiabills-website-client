@@ -58,12 +58,8 @@
   --text-white: #fff; /* Light text (on dark backgrounds) ++++++++*/
   --gray-medium: #2a2a2a; /* Secondary text or muted icons ++++++++*/
   --gray-light: #333; /* Input borders, dividers +++++++++++++*/
-  --blue-medium: #005574; /* Secondary text or muted icons ++++++++*/
-  --text-light-blue: rgb(
-    180,
-    190,
-    190
-  ); /* Light blue text for subtle on dark theme ++++++++ */
+  --blue-medium: rgb(44, 145, 208); /* Secondary text or muted icons ++++++++*/
+  --text-light-blue: rgb(210, 210, 210); /* Light blue text for subtle on dark theme ++++++++ */
   --text-bold-blue: #e6fefa; /* Light blue text for subtle on dark theme ++++++++ */
   --text-primary: #4e4d6c; /* Light blue text for subtle on dark theme ++++++++ */
   --text-black: black; /* full black text  ++++++++ */

@@ -7,9 +7,8 @@ const FilterTabs = ({ categories, activeCategory, onFilterChange }) => {
       {categories.map((category) => (
         <button
           key={category}
-          className={`${styles.tabButton} ${
-            activeCategory === category ? styles.active : ""
-          }`}
+          className={`${styles.tabButton} ${activeCategory === category ? styles.active : ""
+            }`}
           onClick={() => onFilterChange(category)}
         >
           {category}

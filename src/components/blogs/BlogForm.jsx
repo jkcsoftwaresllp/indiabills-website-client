@@ -64,14 +64,11 @@ const BlogForm = ({ mode = "create", blogId }) => {
         await api.post("/blogs", formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
-        console.log(data, "DDDD")
       } else {
         await api.put(`/blogs/${blogId}`, formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
-        console.log(data, "DDDDX")
       }
-
       navigate("/blogs");
     } catch (error) {
       console.error("Error submitting blog:", error);

@@ -5,7 +5,7 @@ import exImage from '../../assets/images/headerImg.jpg'
 
 const FeaturedBlog = ({ id, title, subtitle, author, date, image_url, category }) => {
   const navigate = useNavigate();
-    const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:3000";
+  const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:3000";
 
   const handleClick = () => {
     navigate(`/blogs/${id}`);
@@ -15,7 +15,6 @@ const FeaturedBlog = ({ id, title, subtitle, author, date, image_url, category }
     <section className={styles.featured} onClick={handleClick}>
       {/* Left side image */}
       <div className={styles.imageContainer}>
-        {/* <img src={image} alt={title} className={styles.image} /> */}
         <img src={image_url ? `${backendUrl}${image_url}` : exImage} alt={title} className={styles.image} />
       </div>
 

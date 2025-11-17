@@ -22,7 +22,6 @@ const BlogHero = ({
         <section className={`${styles.blogHero} ${isVisible ? styles.visible : ""}`}>
             <div className={styles.coverImageWrapper}>
                 <img src={coverImage} alt={title} className={styles.coverImage} />
-                {/* <div className={styles.overlay}></div> */}
 
                 <div className={styles.infoBox}>
                     <span className={styles.category}>{category}</span>
