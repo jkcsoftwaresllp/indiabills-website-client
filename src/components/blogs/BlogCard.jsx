@@ -1,13 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./styles/BlogCard.module.css";
 import exImage from "../../assets/images/headerImg.jpg";
 import api from "../../api/api";
+import { AdminContext } from "../../context/AdminContext";
 
 const BlogCard = ({ id, title, subtitle, date, image_url, category, onDelete }) => {
   const navigate = useNavigate();
   const [showOptions, setShowOptions] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+
+  const { isAdmin } = useContext(AdminContext);
 
   const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:3000";
 
@@ -50,15 +53,17 @@ const BlogCard = ({ id, title, subtitle, date, image_url, category, onDelete }) 
         />
         <div className={styles.overlay}></div>
         <span className={styles.category}>{category}</span>
-        <div className={styles.edit} onClick={handleEditMenu}>
-          ⋮
-          {showOptions && (
-            <div className={styles.dropdown}>
-              <button onClick={handleEdit}>Edit</button>
-              <button onClick={handleDelete}>Delete</button>
-            </div>
-          )}
-        </div>
+        {isAdmin &&
+          <div className={styles.edit} onClick={handleEditMenu}>
+            ⋮
+            {showOptions && (
+              <div className={styles.dropdown}>
+                <button onClick={handleEdit}>Edit</button>
+                <button onClick={handleDelete}>Delete</button>
+              </div>
+            )}
+          </div>
+        }
       </div>
 
       <div className={styles.content}>

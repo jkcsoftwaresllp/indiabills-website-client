@@ -21,6 +21,14 @@
   gap: 2rem;
 }
 
+.logout{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  gap: 30px;
+}
+
 @media (max-width: 768px) {
   .featuredSection {
     margin: 2rem auto 1rem;
