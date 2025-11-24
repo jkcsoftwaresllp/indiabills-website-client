@@ -107,6 +107,7 @@
   font-weight: 700;
   text-transform: uppercase;
   display: inline-block;
-  min-width: 200px; /* Keeps spacing even when text changes */
+  min-width: 200px; 
   margin-top: 40px;
+  font-family: var(--heading-font);
 }

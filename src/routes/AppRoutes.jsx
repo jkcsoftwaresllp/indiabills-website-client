@@ -11,6 +11,8 @@ import EditBlogPage from '../pages/EditBlogPage'
 import CreateBlogPage from '../pages/CreateBlogPage'
 import AdminLogin from '../pages/AdminLogin'
 import AdminPrivateRoute from './AdminPrivateRoute'
+import GiveFeedback from '../pages/GiveFeedback'
+import TestimonialsAdmin from '../pages/TestimonialsAdmin'
 
 function AppRoutes() {
     return (
@@ -37,6 +39,12 @@ function AppRoutes() {
                     }
                 />
 
+                <Route path="/give-feedback" element={<GiveFeedback />} />
+                <Route path="/testimonials/admin/all" element={
+                    <AdminPrivateRoute>
+                        <TestimonialsAdmin />
+                    </AdminPrivateRoute>
+                } />
 
 
                 <Route path="/admin-login" element={<AdminLogin />} />

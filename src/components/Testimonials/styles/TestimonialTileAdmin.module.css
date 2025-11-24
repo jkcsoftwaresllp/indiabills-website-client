@@ -1,0 +1,121 @@
+.tile {
+  background: #ffffff;
+  border: 2px solid #457b9d;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(69, 123, 157, 0.15);
+  animation: fadeIn 0.4s ease-in-out;
+  transition: 0.2s;
+}
+
+.tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(69, 123, 157, 0.25);
+}
+
+.header h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #1d3557;
+}
+
+.role {
+  font-size: 14px;
+  color: #666;
+}
+
+.message {
+  margin: 12px 0;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.4;
+}
+
+.rating {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.ratingNumber {
+  margin-left: 6px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Status badge */
+.status {
+  font-weight: bold;
+  padding: 5px 12px;
+  border-radius: 25px;
+  font-size: 13px;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.approved {
+  background: #d4edda;
+  color: #155724;
+}
+
+.rejected {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.actions button {
+  flex: 1;
+  padding: 8px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  transition: 0.2s;
+  font-weight: 600;
+}
+
+.approveBtn {
+  background: #2a9d8f;
+  color: white;
+}
+.approveBtn:hover {
+  background: #21867b;
+}
+
+.rejectBtn {
+  background: #f4a261;
+  color: white;
+}
+.rejectBtn:hover {
+  background: #e48b44;
+}
+
+.deleteBtn {
+  background: #e63946;
+  color: white;
+}
+.deleteBtn:hover {
+  background: #c62c38;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import styles from "./styles/TestimonialsSection.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -8,13 +8,17 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination, EffectCoverflow } from "swiper/modules";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { testimonials } from "./helper/testimonials";
+// import { testimonials } from "./helper/testimonials";
 import TestimonialCard from "./TestimonialCard";
+import api from "../../api/api";
+import TestimonialInvite from "../FeedbackButton/TestimonialInvite";
+import { AdminContext } from "../../context/AdminContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function TestimonialsSection() {
   const sectionRef = useRef(null);
+  const [testimonials, setTestimonials] = useState([])
 
   useEffect(() => {
     const el = sectionRef.current;
@@ -36,6 +40,22 @@ export default function TestimonialsSection() {
       }
     );
   }, []);
+
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      try {
+        const res = await api.get("/testimonials/"  );
+        setTestimonials(res.data);
+        console.log(res.data)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+
+    fetchTestimonials();
+  }, []);
+
+
 
   return (
     <section className={styles.testimonialsSection} ref={sectionRef}>
@@ -71,6 +91,7 @@ export default function TestimonialsSection() {
           </SwiperSlide>
         ))}
       </Swiper>
+        <TestimonialInvite />
     </section>
   );
 }
