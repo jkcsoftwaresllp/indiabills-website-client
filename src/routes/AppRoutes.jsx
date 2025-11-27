@@ -50,8 +50,16 @@ function AppRoutes() {
 
 
 
-                <Route path="/pricing/edit/:id" element={<EditPricingCard />} />
-                <Route path="/pricing/create" element={<CreatePricingCard />} />
+                <Route path="/pricing/edit/:id" element={
+                    <AdminPrivateRoute>
+                        <EditPricingCard />
+                    </AdminPrivateRoute>
+                } />
+                <Route path="/pricing/create" element={
+                    <AdminPrivateRoute>
+                        <CreatePricingCard />
+                    </AdminPrivateRoute>
+                } />
 
 
                 <Route path="/admin-login" element={<AdminLogin />} />

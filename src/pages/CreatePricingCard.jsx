@@ -7,7 +7,7 @@ export default function CreatePricingCard() {
   const navigate = useNavigate();
 
   const handleCreate = async (data) => {
-    await api.post("/pricing", data);
+    await api.post("/pricing", data , { withCredentials: true } );
     navigate("/pricing");
   };
 

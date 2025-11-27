@@ -10,7 +10,7 @@ export default function EditPricingCard() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await api.get(`/pricing/${id}`);
+      const res = await api.get(`/pricing/${id}` , { withCredentials: true} );
       setPricing(res.data[0]);
       console.log(res.data[0])
     };
@@ -18,7 +18,7 @@ export default function EditPricingCard() {
   }, [id]);
 
   const handleUpdate = async (data) => {
-    await api.put(`/pricing/${id}`, data);
+    await api.put(`/pricing/${id}`, data , { withCredentials: true} );
     navigate("/pricing");
   };
 

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useContext } from "react";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import Lottie from "lottie-react";
@@ -8,6 +8,7 @@ import MainContainer from "../containers/mainContainer/MainContainer";
 import CommonButton from "../buttons/CommonButton";
 import api from "../../api/api";
 import { useNavigate } from "react-router-dom";
+import { AdminContext } from "../../context/AdminContext";
 
 
 
@@ -48,6 +49,8 @@ const PricingCardsSection = () => {
   const [pricingPlans, setPricingPlans] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+
+  const { isAdmin } = useContext(AdminContext);
 
 
   useEffect(() => {
@@ -100,9 +103,11 @@ const PricingCardsSection = () => {
           <HoverAnimatedCard plan={plan} billing={billing} key={plan.name} />
         ))}
       </div>
-      <div className={styles.createBtn} >
-        <CommonButton label={"Create Plans"} navigateLink={`/pricing/create`} />
-      </div>
+      {isAdmin &&
+        <div className={styles.createBtn} >
+          <CommonButton label={"Create Plans"} navigateLink={`/pricing/create`} />
+        </div>
+      }
     </MainContainer>
   );
 };
@@ -113,6 +118,8 @@ const HoverAnimatedCard = ({ plan, billing }) => {
   const [hovered, setHovered] = useState(false);
   const [showOptions, setShowOptions] = useState(false)
   const navigate = useNavigate();
+
+  const { isAdmin } = useContext(AdminContext);
 
   const handleHoverStart = () => {
     setHovered(true);
@@ -136,7 +143,7 @@ const HoverAnimatedCard = ({ plan, billing }) => {
   }
   const handleDelete = async (id) => {
     try {
-      api.delete(`/pricing/${id}`);
+      api.delete(`/pricing/${id}` , { withCredentials: true} );
       // setPricingPlans(prev => prev.filter(plan => plan.id !== id));
       window.location.reload();
 
@@ -205,17 +212,17 @@ const HoverAnimatedCard = ({ plan, billing }) => {
         )}
       </ul>
 
-      {/* {isAdmin && */}
-      <div className={styles.edit} onClick={handleEditMenu}>
-        ⋮
-        {showOptions && (
-          <div className={styles.dropdown}>
-            <button onClick={() => handleEdit(plan.id)}>Edit</button>
-            <button onClick={() => handleDelete(plan.id)}>Delete</button>
-          </div>
-        )}
-      </div>
-      {/* } */}
+      {isAdmin &&
+        <div className={styles.edit} onClick={handleEditMenu}>
+          ⋮
+          {showOptions && (
+            <div className={styles.dropdown}>
+              <button onClick={() => handleEdit(plan.id)}>Edit</button>
+              <button onClick={() => handleDelete(plan.id)}>Delete</button>
+            </div>
+          )}
+        </div>
+      }
 
       <CommonButton label="Choose Plan" white={1} />
     </motion.div>

@@ -54,7 +54,7 @@ function TestimonialsAdmin() {
 
   // Approve
   const handleApprove = async (id) => {
-    await api.patch(`/testimonials/admin/approve/${id}` , { withCredentials: true } );
+    await api.patch(`/testimonials/admin/approve/${id}`);
     fetchTestimonials();
   };
 

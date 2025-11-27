@@ -101,7 +101,7 @@ const BlogForm = ({ mode = "create", blogId }) => {
           />
           {errors.title && <p className={styles.error}>{errors.title.message}</p>}
         </div>
-
+        dangerous 
         {/* Description */}
         <div className={styles.field}>
           <label>Short Description</label>
