@@ -1,0 +1,78 @@
+.formCard {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 18px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.inputGroup label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #163b72;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  padding: 12px;
+  border: 1px solid #d4deea;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.inputGroup textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.dynamicRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.addBtn,
+.delBtn {
+  background: #1677ff;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.delBtn {
+  background: #ff4d4f;
+}
+
+.toggleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.submitBtn {
+  width: 100%;
+  background: #1677ff;
+  padding: 12px;
+  border-radius: 12px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.error {
+  color: #d9534f;
+  font-size: 13px;
+  margin-top: 5px;
+}

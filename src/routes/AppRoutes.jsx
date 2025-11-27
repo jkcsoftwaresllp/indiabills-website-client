@@ -13,6 +13,8 @@ import AdminLogin from '../pages/AdminLogin'
 import AdminPrivateRoute from './AdminPrivateRoute'
 import GiveFeedback from '../pages/GiveFeedback'
 import TestimonialsAdmin from '../pages/TestimonialsAdmin'
+import EditPricingCard from '../pages/EditPricingCard'
+import CreatePricingCard from '../pages/CreatePricingCard'
 
 function AppRoutes() {
     return (
@@ -45,6 +47,11 @@ function AppRoutes() {
                         <TestimonialsAdmin />
                     </AdminPrivateRoute>
                 } />
+
+
+
+                <Route path="/pricing/edit/:id" element={<EditPricingCard />} />
+                <Route path="/pricing/create" element={<CreatePricingCard />} />
 
 
                 <Route path="/admin-login" element={<AdminLogin />} />

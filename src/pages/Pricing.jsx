@@ -6,6 +6,7 @@ import ScrollingTextCTA from './home/homeSections/CTASection'
 import FAQSection from '../components/pricingSections/FAQSection'
 import PricingComparisonSection from '../components/pricingSections/PricingComparisonSection'
 import { faqs } from '../components/pricingSections/helper/faqs'
+import CommonButton from '../components/buttons/CommonButton'
 
 function Pricing() {
     return (
